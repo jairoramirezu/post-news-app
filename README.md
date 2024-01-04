@@ -5,10 +5,12 @@
 - Set it up once and post it forever
 
 ### Automate the delivery of your news to all platforms
-![noesnoticia_1](https://noesnoticia.com/images/noesnoticia.png "noesnoticia_1")
+![68747470733a2f2f6e6f65736e6f74696369612e636f6d2f696d616765732f6e6f65736e6f74696369612e706e67](https://github.com/jairoramirezu/post-news-app/assets/68242138/41c73ba9-a23e-4bf1-9ac9-fa99ddcc54a9)
+
 
 ### Structure the delivery of your news just once, send them always
-![noesnoticia_2](https://noesnoticia.com/images/exp.png "noesnoticia_2")
+![68747470733a2f2f6e6f65736e6f74696369612e636f6d2f696d616765732f6578702e706e67](https://github.com/jairoramirezu/post-news-app/assets/68242138/9cd0419f-9dbf-45a9-8955-52f6dc219d82)
+
 
 ------------
 
