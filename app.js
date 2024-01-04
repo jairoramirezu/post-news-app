@@ -2,12 +2,6 @@ import OpenAI from "openai"
 import axios from "axios"
 import "dotenv/config"
 import { TwitterApi } from "twitter-api-v2"
-import { http } from '@google-cloud/functions-framework'
-
-http('helloHttp', (req, res) => {
-  res.send(`Hello ${req.query.name || req.body.name || 'World'}!`)
-  App()
-})
 
 // openai const
 const openai = new OpenAI({
@@ -87,19 +81,19 @@ const App = async () => {
             })
             let page_url = "https://noesnoticia.com/"
             let telegram_text = `${emojis[ran]} ${gptResponse.choices[0].message.content}\n \n💙 <a href="${page_url}">noesnoticia_app</a>`
-            let fb_text = `${emojis[ran]} ${gptResponse.choices[0].message.content}`
             let tw_text = `${emojis[ran]} ${gptResponse.choices[0].message.content}\n \n💙 ${page_url}`
-            await axios.post(url, {
+            let fb_text = `${emojis[ran]} ${gptResponse.choices[0].message.content}`
+            axios.post(url, {
               chat_id: chatId,
               text: telegram_text,
               parse_mode: "HTML"
             })
-            await axios.post(fb_url, {
+            twitterClient.v2.tweet(tw_text)
+            axios.post(fb_url, {
               message: fb_text,
               access_token: process.env.FB_NENAPP_TOKEN,
               link: page_url
             })
-            await twitterClient.v2.tweet(tw_text)
           }
         }
       })
